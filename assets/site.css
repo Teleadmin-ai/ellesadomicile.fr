@@ -1,6 +1,6 @@
 /* Elles à domicile — palette reprise de l'image que Léa aime (pétrole, sauge, lavande,
-   abricot sur crème), logo et maison à l'encre du flyer. Mobile d'abord ; la mise en page
-   « plein écran » commence à 64rem. */
+   abricot sur crème), logo du flyer, roue à l'aquarelle générée par Higgsfield d'après
+   cette image. Mobile d'abord ; la mise en page « plein écran » commence à 64rem. */
 
 @font-face{font-family:"Cormorant";font-weight:500;font-style:normal;font-display:swap;src:url(fonts/cormorant-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Cormorant";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/cormorant-latin-600-normal.woff2) format("woff2")}
@@ -99,11 +99,9 @@ p:last-child{margin-bottom:0}
 .marque span{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.6rem,1.3rem + 1.4vw,2.3rem);color:var(--prune);margin-top:-.3rem;letter-spacing:.02em}
 .accroche{font-family:var(--serif);font-weight:500;font-size:clamp(1.45rem,1.2rem + 1.2vw,2.1rem);line-height:1.3;margin:1rem auto 0;max-width:34rem;text-wrap:balance}
 
-/* Le tourbillon tourne lentement ; la maison, fixe, se dessine par-dessus */
-.accueil__illu{position:relative;width:min(88vw,26rem);aspect-ratio:1;margin:0 auto}
-.tourbillon{position:absolute;inset:0;width:100%;height:100%}
-.epis{position:absolute;inset:-6%;width:112%;height:112%;max-width:none;pointer-events:none}
-.maison{position:absolute;left:50%;top:50%;width:46%;height:auto;transform:translate(-50%,-50%)}
+/* La roue à l'aquarelle (Higgsfield, d'après l'image que Léa aime) respire doucement */
+.accueil__illu{width:min(88vw,26rem);margin:0 auto}
+.roue{width:100%;height:auto}
 
 .qui{font-family:var(--serif);font-weight:600;font-size:1.6rem;color:var(--prune);margin:0}
 .qui span{display:block;font-family:var(--sans);font-weight:400;font-size:1rem;color:var(--muted)}
@@ -111,18 +109,9 @@ p:last-child{margin-bottom:0}
 .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.75rem}
 
 @media (prefers-reduced-motion:no-preference){
-  .tourbillon{animation:tourne 90s linear infinite;will-change:transform}
-  .maison .trait > *{stroke-dasharray:1;stroke-dashoffset:1;animation:trace 1.6s cubic-bezier(.45,.05,.35,1) .3s forwards}
-  .maison .trait > :nth-child(2){animation-delay:.5s}
-  .maison .trait > :nth-child(3){animation-delay:.7s}
-  .maison .trait > :nth-child(n+4){animation-delay:.95s}
-  .maison .trait > :nth-child(n+8){animation-delay:1.25s}
-  .maison .couleurs{opacity:0;animation:lavis 1.4s ease-out 1.3s forwards}
-  .engagement__tourbillon{animation:tourne 140s linear infinite reverse}
+  .roue{animation:respire 7s ease-in-out infinite alternate}
 }
-@keyframes tourne{to{transform:rotate(360deg)}}
-@keyframes trace{to{stroke-dashoffset:0}}
-@keyframes lavis{to{opacity:1}}
+@keyframes respire{from{transform:scale(.97) rotate(-1.5deg)}to{transform:scale(1.02) rotate(1.5deg)}}
 
 /* ---------- Approche ---------- */
 .approche__phrase{font-family:var(--serif);font-size:clamp(1.55rem,1.3rem + 1vw,2.1rem);line-height:1.35;color:var(--ink)}
@@ -167,7 +156,7 @@ p:last-child{margin-bottom:0}
 .engagement{background:var(--petrol);color:#f6efe2;text-align:center}
 .engagement h2{font-size:1.6rem;color:var(--abricot-l);margin-bottom:1rem}
 .engagement blockquote{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.55rem,1.3rem + 1.2vw,2.3rem);line-height:1.4}
-.bloc > .engagement__tourbillon{position:absolute;z-index:0;width:34rem;height:34rem;max-width:none;right:-12rem;top:50%;margin-top:-17rem;opacity:.22;pointer-events:none}
+.bloc > .engagement__roue{position:absolute;z-index:0;width:34rem;height:34rem;max-width:none;right:-12rem;top:50%;margin-top:-17rem;opacity:.18;pointer-events:none}
 
 /* ---------- Contact ---------- */
 .contact-grille{display:grid;gap:2.5rem}
@@ -276,7 +265,7 @@ p:last-child{margin-bottom:0}
 .texte h2{font-size:1.9rem;margin:2.5rem 0 .75rem}
 
 @media print{
-  .barre,.navigation,.actions,.formulaire,.lavis,.tourbillon,.engagement__tourbillon{display:none}
+  .barre,.navigation,.actions,.formulaire,.lavis,.engagement__roue{display:none}
   body{background:none;padding-bottom:0}
   .engagement{background:none;color:var(--ink)}
 }
