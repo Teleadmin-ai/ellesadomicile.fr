@@ -1,0 +1,15 @@
+# Secrets : ne jamais commiter
+*token*
+.env*
+
+# Documents de travail, hors du site public
+CLAUDE.md
+NOTES-projet-elles.md
+sources-lea/
+flyer/
+illustrations-higgsfield/
+logo/
+outils/
+.claude/
+
+.DS_Store
