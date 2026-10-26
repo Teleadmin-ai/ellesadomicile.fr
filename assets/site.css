@@ -153,6 +153,17 @@ p:last-child{margin-bottom:0}
 .etapes h3{font-size:1.5rem;color:var(--ink);margin-bottom:.25rem}
 .etapes p{color:var(--muted)}
 
+/* ---------- Crédit d'impôt et démarches ---------- */
+.avantage{margin:1.25rem 0 0;font-weight:700;color:var(--petrol)}
+.credit__grille{display:grid;gap:2.5rem}
+.credit__chapo{font-family:var(--serif);font-size:clamp(1.45rem,1.25rem + .8vw,1.9rem);line-height:1.35;color:var(--ink)}
+.credit__principal .liste li{margin:.6rem 0}
+.credit__parent{background:var(--abricot-l)}
+.credit__parent h3{color:var(--petrol)}
+.credit__demarches{background:var(--blanc);border-left:6px solid var(--sage);border-radius:1rem;padding:1.75rem 1.25rem}
+.credit__demarches h3{color:var(--petrol)}
+.credit__source{font-size:.95rem;color:var(--muted);margin:0}
+
 /* ---------- Engagement : bande pétrole ---------- */
 .engagement{background:var(--petrol);color:#f6efe2;text-align:center}
 .engagement h2{font-size:1.6rem;color:var(--abricot-l);margin-bottom:1rem}
@@ -210,7 +221,7 @@ p:last-child{margin-bottom:0}
   .barre{display:none}
   .bloc{padding-block:5rem;padding-inline:2.5rem}
   .encart{padding:2.5rem 2.75rem}
-  .formulaire{padding:2.25rem 2rem}
+  .formulaire,.credit__demarches{padding:2.25rem 2rem}
   .prestations{grid-template-columns:1fr 1fr;gap:1.5rem}
   .atouts{grid-template-columns:repeat(3,1fr);gap:2.5rem}
   .atout{grid-template-columns:1fr;gap:1rem}
@@ -219,8 +230,9 @@ p:last-child{margin-bottom:0}
   .navigation{display:block;position:sticky;top:0;z-index:20;background:rgba(252,244,230,.94);border-bottom:1px solid var(--rule);backdrop-filter:blur(6px)}
   .navigation__dedans{max-width:var(--large);margin:0 auto;padding:.6rem 2.5rem;display:flex;align-items:center;gap:2rem}
   .navigation__marque img{width:6.5rem;height:auto}
-  .navigation nav{display:flex;gap:1.75rem;margin-left:auto}
-  .navigation nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:1rem}
+  .navigation nav{display:flex;gap:1.25rem;margin-left:auto}
+  .navigation nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:1rem;white-space:nowrap}
+  .navigation .nav-large{display:none} /* sur tablette, cinq liens ne tiennent pas sur une ligne */
   .navigation nav a:hover{color:var(--petrol);text-decoration:underline}
 
   /* Sur grand écran, les prestations restent ouvertes : pas d'accordéon */
@@ -248,11 +260,18 @@ p:last-child{margin-bottom:0}
   .accroche{margin-left:0}
   .intro{margin-left:0}
   .actions{justify-content:flex-start}
+  .navigation nav{gap:1.75rem}
+  .navigation .nav-large{display:inline}
   .accueil__illu{width:min(44vw,40rem);align-self:center;justify-self:center}
 
   .approche__grille{display:grid;grid-template-columns:1fr 1.6fr;column-gap:5rem;align-items:start}
   .approche__grille h2{grid-row:span 2}
   .public-etapes{grid-template-columns:5fr 7fr;gap:4rem;align-items:start}
+  .credit__grille{grid-template-columns:7fr 5fr;column-gap:4rem;align-items:start}
+  /* démarches sur toute la largeur : texte à gauche, liste à droite */
+  .credit__demarches{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto 1fr;column-gap:3rem;align-items:start}
+  .credit__demarches .liste{grid-column:2;grid-row:1 / span 3;margin:0}
+  .credit__source{grid-column:1 / -1}
   .contact-grille{grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
   .pied{text-align:left}
   .pied__dedans{grid-template-columns:auto 1fr auto;align-items:center;justify-items:start;gap:2.5rem}
