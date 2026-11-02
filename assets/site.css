@@ -131,6 +131,7 @@ p:last-child{margin-bottom:0}
 .liste{list-style:none;padding:0;margin:.4rem 0 1rem}
 .liste li{padding-left:1.4rem;position:relative;margin:.2rem 0}
 .liste li::before{content:"–";position:absolute;left:0;color:var(--sage-d)}
+.prestations__limite{margin:1.5rem 0 0;font-size:1rem;color:var(--muted);max-width:var(--mesure)}
 
 /* ---------- Différence ---------- */
 .atouts{display:grid;gap:2rem;margin-top:.5rem}
