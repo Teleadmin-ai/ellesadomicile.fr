@@ -131,7 +131,6 @@ p:last-child{margin-bottom:0}
 .liste{list-style:none;padding:0;margin:.4rem 0 1rem}
 .liste li{padding-left:1.4rem;position:relative;margin:.2rem 0}
 .liste li::before{content:"–";position:absolute;left:0;color:var(--sage-d)}
-.prestations__limite{margin:1.5rem 0 0;font-size:1rem;color:var(--muted);max-width:var(--mesure)}
 
 /* ---------- Différence ---------- */
 .atouts{display:grid;gap:2rem;margin-top:.5rem}
@@ -140,11 +139,8 @@ p:last-child{margin-bottom:0}
 .atout h3{font-size:1.6rem;margin-bottom:.3rem}
 .atout p{color:var(--muted)}
 
-/* ---------- Pour qui + étapes ---------- */
-.public-etapes{display:grid;gap:3rem}
+/* ---------- Encarts et étapes ---------- */
 .encart{background:var(--sage-l);border-radius:1.25rem;padding:2rem 1.5rem}
-.encart h2{margin-bottom:.75rem}
-.encart .liste{margin-bottom:0}
 .etapes{list-style:none;padding:0;margin:0;counter-reset:etape;display:grid;gap:1.6rem}
 .etapes li{counter-increment:etape;display:grid;grid-template-columns:3rem 1fr;gap:.75rem}
 .etapes li::before{
@@ -226,6 +222,8 @@ p:last-child{margin-bottom:0}
   .prestations{grid-template-columns:1fr 1fr;gap:1.5rem}
   .atouts{grid-template-columns:repeat(3,1fr);gap:2.5rem}
   .atout{grid-template-columns:1fr;gap:1rem}
+  .etapes{grid-template-columns:repeat(3,1fr);gap:2.5rem}
+  .etapes li{grid-template-columns:1fr;gap:.75rem;align-content:start} /* titres alignés d'une colonne à l'autre */
 
   html{scroll-padding-top:5.5rem} /* hauteur de la barre de navigation */
   .navigation{display:block;position:sticky;top:0;z-index:20;background:rgba(252,244,230,.94);border-bottom:1px solid var(--rule);backdrop-filter:blur(6px)}
@@ -233,7 +231,7 @@ p:last-child{margin-bottom:0}
   .navigation__marque img{width:6.5rem;height:auto}
   .navigation nav{display:flex;gap:1.25rem;margin-left:auto}
   .navigation nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:1rem;white-space:nowrap}
-  .navigation .nav-large{display:none} /* sur tablette, cinq liens ne tiennent pas sur une ligne */
+  .navigation .nav-large{display:none} /* sur tablette, les quatre liens ne tiennent pas sur une ligne */
   .navigation nav a:hover{color:var(--petrol);text-decoration:underline}
 
   /* Sur grand écran, les prestations restent ouvertes : pas d'accordéon */
@@ -267,7 +265,6 @@ p:last-child{margin-bottom:0}
 
   .approche__grille{display:grid;grid-template-columns:1fr 1.6fr;column-gap:5rem;align-items:start}
   .approche__grille h2{grid-row:span 2}
-  .public-etapes{grid-template-columns:5fr 7fr;gap:4rem;align-items:start}
   .credit__grille{grid-template-columns:7fr 5fr;column-gap:4rem;align-items:start}
   /* démarches sur toute la largeur : texte à gauche, liste à droite */
   .credit__demarches{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto 1fr;column-gap:3rem;align-items:start}
