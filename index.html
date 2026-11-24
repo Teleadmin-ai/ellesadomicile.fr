@@ -14,6 +14,44 @@
 <meta property="og:image" content="https://ellesadomicile.fr/assets/img/partage.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<!-- Pour Google : nom du site dans les résultats et fiche de l'activité. Type Organization et non LocalBusiness,
+     qui exige une adresse (Léa n'en publie pas) ; la présence locale passe par la fiche Google Business Profile. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ellesadomicile.fr/#site",
+      "name": "Elles à domicile",
+      "url": "https://ellesadomicile.fr/",
+      "inLanguage": "fr-FR",
+      "publisher": {"@id": "https://ellesadomicile.fr/#activite"}
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ellesadomicile.fr/#activite",
+      "name": "Elles à domicile",
+      "url": "https://ellesadomicile.fr/",
+      "logo": "https://ellesadomicile.fr/assets/img/logo-elles.webp",
+      "image": "https://ellesadomicile.fr/assets/img/partage.jpg",
+      "description": "Accompagnement à domicile pour préserver l’autonomie, le lien social et les capacités cognitives, à Moulins et alentours. Éligible au crédit d’impôt.",
+      "telephone": "+33604195815",
+      "email": "lea@ellesadomicile.fr",
+      "areaServed": {
+        "@type": "City",
+        "name": "Moulins",
+        "containedInPlace": {"@type": "AdministrativeArea", "name": "Allier"}
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Léa Guerinet",
+        "jobTitle": "Accompagnatrice à l’autonomie"
+      }
+    }
+  ]
+}
+</script>
 <meta name="theme-color" content="#fcf4e6">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
