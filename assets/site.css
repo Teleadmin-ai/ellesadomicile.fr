@@ -264,7 +264,7 @@ p:last-child{margin-bottom:0}
   .accueil__illu{width:min(44vw,40rem);align-self:center;justify-self:center}
 
   .approche__grille{display:grid;grid-template-columns:1fr 1.6fr;column-gap:5rem;align-items:start}
-  .approche__grille h2{grid-row:span 2}
+  .approche__grille h2{grid-row:span 3} /* titre à gauche des trois paragraphes */
   .credit__grille{grid-template-columns:7fr 5fr;column-gap:4rem;align-items:start}
   /* démarches sur toute la largeur : texte à gauche, liste à droite */
   .credit__demarches{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto 1fr;column-gap:3rem;align-items:start}
